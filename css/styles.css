@@ -1,0 +1,157 @@
+/* Importando uma fonte moderna do Google */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f7f6; /* Um cinza bem clarinho para não cansar a vista */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Sombra suave estilo Figma */
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+/* Estilização do Campo de Busca */
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Garante que o padding não quebre a largura */
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #3498db; /* Azul ao clicar */
+    outline: none;
+}
+
+/* O Botão Principal */
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:active {
+    transform: scale(0.98); /* Efeito de clique */
+}
+
+/* Área do Versículo */
+#texto {
+    font-size: 1.25rem;
+    color: #34495e;
+    margin-top: 2rem;
+    font-style: italic;
+    line-height: 1.6;
+    min-height: 80px; /* Evita que o card fique pulando de tamanho */
+}
+
+#referencia {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    backdrop-filter: blur(55px);
+    color: #444;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: #444;
+    transition: 0.3s;
+    transform: scale(1.2);
+}
+/* O MARCA-TEXTO (Mágica do JS) */
+mark {
+    background-color: #f1c40f; /* Amarelo vivo */
+    color: #000;
+    padding: 0 4px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Ajustes para dispositivos móveis (Celulares) */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+        align-items: flex-start; /* Evita que o conteúdo suma se a tela for pequena */
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .container {
+        padding: 1.5rem;
+        width: 100%; /* Ocupa a largura disponível */
+        margin-top: 20px;
+    }
+
+    h1 {
+        font-size: 1.3rem; /* Título um pouco menor */
+    }
+
+    #texto {
+        font-size: 1.1rem; /* Melhora a leitura em telas estreitas */
+        min-height: 120px; /* Garante espaço para versículos maiores */
+    }
+
+    /* Botão maior para facilitar o toque com o polegar */
+    button {
+        padding: 16px;
+        font-size: 1.1rem;
+    }
+
+    /* Footer ajustado para mobile */
+    footer {
+        padding: 1.5rem 0;
+    }
+
+    .linkedin-link {
+        font-size: 0.9rem;
+    }
+}
